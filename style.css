@@ -14,11 +14,18 @@
     bottom: 0;
 }
 
+/* CENTRA TUTTO IL CONTENUTO NELLO SFONDO */
+body {
+    display: flex;
+    justify-content: center;   /* centro orizzontale */
+    align-items: center;       /* centro verticale */
+    min-height: 100vh;
+    margin: 0;
+}
+
 /* CARD TRASPARENTE + TESTO CENTRATO */
 .card {
-    position: relative;
     max-width: 90%;
-    margin: 40px auto;
     padding: 20px;
 
     background: transparent;
@@ -28,7 +35,7 @@
     font-size: 1rem;
     line-height: 1.4;
 
-    transform: scale(0.75);   /* PIÙ GRANDE */
+    transform: scale(0.85);     /* leggermente più grande */
     transform-origin: top center;
 }
 
@@ -46,7 +53,7 @@
     }
 
     .card {
-        transform: scale(0.65);  /* leggermente più piccolo su mobile */
+        transform: scale(0.75);  /* più grande anche su mobile */
         padding: 15px;
     }
 }
