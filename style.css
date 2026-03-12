@@ -25,7 +25,7 @@
     border-radius: 12px;
 
     text-align: center;        /* CENTRA TUTTO IL TESTO */
-    font-size: 1.2rem;         /* Zoommabile */
+    font-size: 1rem;         /* Zoommabile */
     line-height: 1.6;
 }
 
@@ -43,7 +43,7 @@
     }
 
     .card {
-        font-size: 1rem;
+        font-size: 0.875rem;
         padding: 15px;
     }
 }
