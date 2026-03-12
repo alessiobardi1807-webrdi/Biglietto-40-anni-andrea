@@ -1,12 +1,12 @@
-/* Sfondo NON zoommato */
+/* SFONDO NON ZOOMMATO */
 #bg {
     position: fixed;
     top: 0;
     left: 0;
     width: auto;              /* Mantiene dimensione naturale */
-    height: auto;             /* Mantiene proporzioni reali */
-    max-width: 100%;          /* Non supera la larghezza dello schermo */
-    max-height: 100%;         /* Non supera l’altezza dello schermo */
+    height: auto;
+    max-width: 100%;          /* Non supera lo schermo */
+    max-height: 100%;
     object-fit: contain;      /* Nessuno zoom */
     z-index: -1;
     margin: auto;
@@ -14,25 +14,27 @@
     bottom: 0;
 }
 
-/* Contenitore del testo */
+/* CARD TRASPARENTE + TESTO CENTRATO */
 .card {
     position: relative;
     max-width: 90%;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.75); /* Leggibilità */
+
+    background: transparent;   /* COMPLETAMENTE TRASPARENTE */
     border-radius: 12px;
-    font-size: 1.2rem;        /* Zoommabile */
+
+    text-align: center;        /* CENTRA TUTTO IL TESTO */
+    font-size: 1.2rem;         /* Zoommabile */
     line-height: 1.6;
-    backdrop-filter: blur(4px);
 }
 
-/* Testo */
+/* SPAZIATURA TRA PARAGRAFI */
 .card p {
     margin-bottom: 18px;
 }
 
-/* Mobile: lo sfondo resta naturale, il testo leggibile */
+/* MOBILE */
 @media (max-width: 600px) {
     #bg {
         width: 100%;
