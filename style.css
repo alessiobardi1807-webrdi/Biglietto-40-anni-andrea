@@ -1,49 +1,55 @@
+/* Reset base */
 body {
     margin: 0;
     padding: 0;
-    font-family: "Segoe UI", sans-serif;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
 
-    /* SFONDO A TUTTA PAGINA */
-    background: url("sfondo biglietto andrea.jpeg") no-repeat center center fixed;
-    background-size: contain;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Sfondo HTML per PC */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
-/* CARD SEMPLICE SENZA EFFETTI */
+/* Card centrale */
 .card {
-    background: rgba(255, 255, 255, 0.4); /* leggerissima trasparenza */
+    background: rgba(255, 255, 255, 0.75);
+    width: 60%;
+    max-width: 600px;
+    margin: 100px auto;
     padding: 30px;
-    border-radius: 20px;
-    max-width: 450px;
+    border-radius: 15px;
     text-align: center;
+    backdrop-filter: blur(4px);
 }
 
-/* Stili del testo */
-.message {
-    font-size: 1.2rem;
-    margin-top: 15px;
-}
-
-.signature {
-    margin-top: 25px;
-    font-style: italic;
-    color: #333;
-}
-
-/* Adattamento per smartphone */
+/* ----------------------------- */
+/* 📱 Modalità Smartphone */
+/* ----------------------------- */
 @media (max-width: 600px) {
-    body {
-        background-size: contain;
-        background-position: center top;
-        background-repeat: no-repeat;
+
+    /* Disattivo lo sfondo HTML */
+    #bg {
+        display: none;
     }
 
+    /* Sfondo CSS stabile per smartphone */
+    body {
+        background: url("sfondo biglietto andrea.jpeg") no-repeat center top;
+        background-size: cover;
+    }
+
+    /* Card perfettamente centrata */
     .card {
-        background: rgba(255, 255, 255, 0.6);
-        margin: 20px;
+        width: 90%;
+        margin: 40px auto;
+        padding: 20px;
+        border-radius: 12px;
     }
 }
