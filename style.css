@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+
+    /* SFONDO A TUTTA PAGINA */
+    background: url("sfondo biglietto andrea.jpeg") no-repeat center center fixed;
+    background-size: contain;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* CARD SEMPLICE SENZA EFFETTI */
+.card {
+    background: rgba(255, 255, 255, 0.4); /* leggerissima trasparenza */
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Stili del testo */
+.message {
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.signature {
+    margin-top: 25px;
+    font-style: italic;
+    color: #333;
+}
+
+/* Adattamento per smartphone */
+@media (max-width: 600px) {
+    body {
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.6);
+        margin: 20px;
+    }
+}
