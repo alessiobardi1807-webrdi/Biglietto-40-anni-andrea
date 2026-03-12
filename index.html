@@ -1,10 +1,33 @@
-<script>
-    function resizeBackground() {
-        const bg = document.getElementById("bg");
-        bg.style.width = window.innerWidth + "px";
-        bg.style.height = window.innerHeight + "px";
-    }
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biglietto Andrea 40</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    window.addEventListener("load", resizeBackground);
-    window.addEventListener("resize", resizeBackground);
-</script>
+    <!-- Sfondo come immagine HTML -->
+    <img id="bg" src="sfondo biglietto andrea.jpeg" alt="">
+
+    <!-- Contenuto del biglietto -->
+    <div class="card">
+        <h1>Buon Compleanno Andrea!</h1>
+        <p>Qui potrai inserire il testo del biglietto.</p>
+    </div>
+
+    <!-- Script per adattare lo sfondo a qualsiasi schermo -->
+    <script>
+        function resizeBackground() {
+            const bg = document.getElementById("bg");
+            bg.style.width = window.innerWidth + "px";
+            bg.style.height = window.innerHeight + "px";
+        }
+
+        window.addEventListener("load", resizeBackground);
+        window.addEventListener("resize", resizeBackground);
+    </script>
+
+</body>
+</html>
